@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export function ProgressBar({ value = 0, label }) {
   const clamped = Math.min(100, Math.max(0, value));
   return (
@@ -14,3 +16,8 @@ export function ProgressBar({ value = 0, label }) {
     </div>
   );
 }
+
+ProgressBar.propTypes = {
+  value: PropTypes.number,
+  label: PropTypes.string,
+};

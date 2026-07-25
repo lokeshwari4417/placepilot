@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const VARIANTS = {
   primary: "bg-accent-600 text-white hover:bg-accent-700",
   secondary: "bg-slate-100 text-ink hover:bg-slate-200",
@@ -14,3 +16,9 @@ export function Button({ variant = "primary", className = "", children, ...props
     </button>
   );
 }
+
+Button.propTypes = {
+  variant: PropTypes.oneOf(["primary", "secondary", "ghost"]),
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+};

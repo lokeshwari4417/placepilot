@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export function Input({ label, error, className = "", ...props }) {
   return (
     <label className="block">
@@ -10,3 +12,9 @@ export function Input({ label, error, className = "", ...props }) {
     </label>
   );
 }
+
+Input.propTypes = {
+  label: PropTypes.string,
+  error: PropTypes.string,
+  className: PropTypes.string,
+};
