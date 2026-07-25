@@ -77,5 +77,18 @@ class PasswordResetConfirmView(APIView):
     def post(self, request):
         serializer = PasswordResetConfirmSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        # Token validation + password set to be wired up with the uid flow.
+        
+        user = PasswordResetService.validate_reset_token(
+            serializer.validated_data["uid"],
+            serializer.validated_data["token"]
+        )
+        
+        if not user:
+            return Response(
+                {"detail": "Invalid or expired reset token."},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        
+        user.set_password(serializer.validated_data["new_password"])
+        user.save()
         return Response({"detail": "Password has been reset."})

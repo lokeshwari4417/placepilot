@@ -11,4 +11,12 @@ module.exports = {
   rules: {
     "react/react-in-jsx-scope": "off",
   },
+  globals: {
+    vi: "readonly",
+    describe: "readonly",
+    it: "readonly",
+    expect: "readonly",
+    beforeEach: "readonly",
+    afterEach: "readonly",
+  },
 };
