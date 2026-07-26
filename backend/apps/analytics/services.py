@@ -18,6 +18,7 @@ class ReadinessScoreService:
                 "resume_score": 0,
                 "interview_score": 0,
                 "roadmap_progress": 0,
+                "streak_days": 0,
             }
         )
         return score

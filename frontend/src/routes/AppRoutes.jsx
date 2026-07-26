@@ -9,6 +9,7 @@ import RegisterPage from "../pages/RegisterPage";
 import PasswordResetRequestPage from "../pages/PasswordResetRequestPage";
 import PasswordResetConfirmPage from "../pages/PasswordResetConfirmPage";
 import DashboardPage from "../pages/DashboardPage";
+import RoadmapPage from "../pages/RoadmapPage";
 import NotFoundPage from "../pages/NotFoundPage";
 
 export function AppRoutes() {
@@ -24,6 +25,7 @@ export function AppRoutes() {
       <Route element={<ProtectedRoute />}>
         <Route element={<AppShell />}>
           <Route path="/" element={<DashboardPage />} />
+          <Route path="/roadmaps/:id" element={<RoadmapPage />} />
         </Route>
       </Route>
 
