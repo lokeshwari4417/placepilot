@@ -1,7 +1,13 @@
 from django.urls import path
+from rest_framework.routers import DefaultRouter
 
-app_name = "coding"
+from .views import ProblemViewSet, SubmissionDetailView, SubmissionListView
+
+router = DefaultRouter()
+router.register(r"problems", ProblemViewSet, basename="problem")
 
 urlpatterns = [
-    # Routes for 'coding' are added in its implementation phase.
-]
+    path("submissions/", SubmissionListView.as_view(), name="submission-list"),
+    path("submissions/<uuid:pk>/", SubmissionDetailView.as_view(), name="submission-detail"),
+    path("problems/<uuid:problem_id>/submit/", SubmissionListView.as_view(), name="problem-submit"),
+] + router.urls
