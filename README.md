@@ -12,9 +12,6 @@ dashboard, so students never have to switch between platforms.
 - **Frontend:** React, Tailwind CSS, React Router, Axios, TanStack Query
 - **Backend:** Django, Django REST Framework, PostgreSQL, SimpleJWT
 - **Infra:** Docker, Docker Compose, GitHub Actions CI/CD
-
-- 
-
 ## Project Structure
 
 ```
