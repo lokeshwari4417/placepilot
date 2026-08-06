@@ -13,8 +13,6 @@ dashboard, so students never have to switch between platforms.
 - **Backend:** Django, Django REST Framework, PostgreSQL, SimpleJWT
 - **Infra:** Docker, Docker Compose, GitHub Actions CI/CD
 
-
-
 ## Project Structure
 
 ```
