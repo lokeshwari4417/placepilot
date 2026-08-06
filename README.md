@@ -84,9 +84,18 @@ static build for the frontend) behind a single Nginx reverse proxy terminating
 - Every PR must pass `ruff check`, `pytest`, `eslint`, and frontend tests (see
   `.github/workflows/ci.yml`).
 
+
+  
+
 ## Current Status
 
 Phase 1 (project setup) is complete: Docker/Compose, Django project + all app
 scaffolds, PostgreSQL, React + Tailwind frontend, JWT auth (register/login/refresh/
 logout/me/password-reset), and CI. Remaining modules are built phase-by-phase per
 the project blueprint.
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------
