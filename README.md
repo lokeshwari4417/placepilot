@@ -92,9 +92,3 @@ Phase 1 (project setup) is complete: Docker/Compose, Django project + all app
 scaffolds, PostgreSQL, React + Tailwind frontend, JWT auth (register/login/refresh/
 logout/me/password-reset), and CI. Remaining modules are built phase-by-phase per
 the project blueprint.
-
-
-
-
-
-----------------------------------------------------------------------------
